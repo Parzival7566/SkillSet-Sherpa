@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptitude Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .options label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .options input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button[type="submit"] {
+            display: block;
+            margin: 20px auto;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Aptitude Test</h1>
+        <form id="aptitude-form" method="POST">
+
+
+           
+            <div class="question">
+                <p>Do you enjoy working with your hands and tools?</p>
+                <div class="options">
+                    <label><input type="radio" name="1" value="1"> Strongly Disagree</label>
+                    <label><input type="radio" name="1" value="2"> Disagree</label>
+                    <label><input type="radio" name="1" value="3"> Neutral</label>
+                    <label><input type="radio" name="1" value="4"> Agree</label>
+                    <label><input type="radio" name="1" value="5"> Strongly Agree</label>
+                </div>
+                 <p>Are you naturally curious and enjoy exploring new ideas?</p>
+                <div class="options">
+                    <label><input type="radio" name="2" value="1"> Strongly Disagree</label>
+                    <label><input type="radio" name="2" value="2"> Disagree</label>
+                    <label><input type="radio" name="2" value="3"> Neutral</label>
+                    <label><input type="radio" name="2" value="4"> Agree</label>
+                    <label><input type="radio" name="2" value="5"> Strongly Agree</label>
+                </div>
+                <p>Do you have a passion for creative activities like drawing, writing, or music?</p>
+                <div class="options">
+                    <label><input type="radio" name="3" value="1"> Strongly Disagree</label>
+                    <label><input type="radio" name="3" value="2"> Disagree</label>
+                    <label><input type="radio" name="3" value="3"> Neutral</label>
+                    <label><input type="radio" name="3" value="4"> Agree</label>
+                    <label><input type="radio" name="3" value="5"> Strongly Agree</label>
+                </div>
+                 <p>Do you find fulfillment in helping and working with others?</p>
+                <div class="options">
+                    <label><input type="radio" name="4" value="1"> Strongly Disagree</label>
+                    <label><input type="radio" name="4" value="2"> Disagree</label>
+                    <label><input type="radio" name="4" value="3"> Neutral</label>
+                    <label><input type="radio" name="4" value="4"> Agree</label>
+                    <label><input type="radio" name="4" value="5"> Strongly Agree</label>
+                </div>
+                
+                <p>Are you ambitious and enjoy taking on leadership roles?</p>
+                <div class="options">
+                    <label><input type="radio" name="5" value="1"> Strongly Disagree</label>
+                    <label><input type="radio" name="5" value="2"> Disagree</label>
+                    <label><input type="radio" name="5" value="3"> Neutral</label>
+                    <label><input type="radio" name="5" value="4"> Agree</label>
+                    <label><input type="radio" name="5" value="5"> Strongly Agree</label>
+                </div>
+                <p>Do you prefer working in structured and organized environments?</p>
+                <div class="options">
+                    <label><input type="radio" name="6" value="1"> Strongly Disagree</label>
+                    <label><input type="radio" name="6" value="2"> Disagree</label>
+                    <label><input type="radio" name="6" value="3"> Neutral</label>
+                    <label><input type="radio" name="6" value="4"> Agree</label>
+                    <label><input type="radio" name="6" value="5"> Strongly Agree</label>
+                </div>
+                <p>Are you interested in working outdoors or in natural settings?</p>
+                <div class="options">
+                    <label><input type="radio" name="7" value="1"> Strongly Disagree</label>
+                    <label><input type="radio" name="7" value="2"> Disagree</label>
+                    <label><input type="radio" name="7" value="3"> Neutral</label>
+                    <label><input type="radio" name="7" value="4"> Agree</label>
+                    <label><input type="radio" name="7" value="5"> Strongly Agree</label>
+                </div>
+                <p>Do you prefer a fast-paced and dynamic work environment?</p>
+                <div class="options">
+                    <label><input type="radio" name="8" value="1"> Strongly Disagree</label>
+                    <label><input type="radio" name="8" value="2"> Disagree</label>
+                    <label><input type="radio" name="8" value="3"> Neutral</label>
+                    <label><input type="radio" name="8" value="4"> Agree</label>
+                    <label><input type="radio" name="8" value="5"> Strongly Agree</label>
+                </div>
+                <p>Do you enjoy working with machinery and technology?</p>
+                <div class="options">
+                    <label><input type="radio" name="9" value="1"> Strongly Disagree</label>
+                    <label><input type="radio" name="9" value="2"> Disagree</label>
+                    <label><input type="radio" name="9" value="3"> Neutral</label>
+                    <label><input type="radio" name="9" value="4"> Agree</label>
+                    <label><input type="radio" name="9" value="5"> Strongly Agree</label>
+                </div>
+                <p>Do you like conducting experiments and solving complex problems?</p>
+                <div class="options">
+                    <label><input type="radio" name="10" value="1"> Strongly Disagree</label>
+                    <label><input type="radio" name="10" value="2"> Disagree</label>
+                    <label><input type="radio" name="10" value="3"> Neutral</label>
+                    <label><input type="radio" name="10" value="4"> Agree</label>
+                    <label><input type="radio" name="10" value="5"> Strongly Agree</label>
+                </div>
+                <p>Do you have a talent for artistic and creative expression?</p>
+                <div class="options">
+                    <label><input type="radio" name="11" value="1"> Strongly Disagree</label>
+                    <label><input type="radio" name="11" value="2"> Disagree</label>
+                    <label><input type="radio" name="11" value="3"> Neutral</label>
+                    <label><input type="radio" name="11" value="4"> Agree</label>
+                    <label><input type="radio" name="11" value="5"> Strongly Agree</label>
+                </div>
+                <p>Do you enjoy teaching or mentoring others?</p>
+                <div class="options">
+                    <label><input type="radio" name="12" value="1"> Strongly Disagree</label>
+                    <label><input type="radio" name="12" value="2"> Disagree</label>
+                    <label><input type="radio" name="12" value="3"> Neutral</label>
+                    <label><input type="radio" name="12" value="4"> Agree</label>
+                    <label><input type="radio" name="12" value="5"> Strongly Agree</label>
+                </div>
+                <p>Do you have strong negotiation and persuasion skills?</p>
+                <div class="options">
+                    <label><input type="radio" name="13" value="1"> Strongly Disagree</label>
+                    <label><input type="radio" name="13" value="2"> Disagree</label>
+                    <label><input type="radio" name="13" value="3"> Neutral</label>
+                    <label><input type="radio" name="13" value="4"> Agree</label>
+                    <label><input type="radio" name="13" value="5"> Strongly Agree</label>
+                </div>
+                <p>Do you prefer a neat and structured workspace?</p>
+                <div class="options">
+                    <label><input type="radio" name="14" value="1"> Strongly Disagree</label>
+                    <label><input type="radio" name="14" value="2"> Disagree</label>
+                    <label><input type="radio" name="14" value="3"> Neutral</label>
+                    <label><input type="radio" name="14" value="4"> Agree</label>
+                    <label><input type="radio" name="14" value="5"> Strongly Agree</label>
+                </div>
+                <p>Do you like spending time in nature and outdoor activities?</p>
+                <div class="options">
+                    <label><input type="radio" name="15" value="1"> Strongly Disagree</label>
+                    <label><input type="radio" name="15" value="2"> Disagree</label>
+                    <label><input type="radio" name="15" value="3"> Neutral</label>
+                    <label><input type="radio" name="15" value="4"> Agree</label>
+                    <label><input type="radio" name="15" value="5"> Strongly Agree</label>
+                </div>
+                <p>Do you thrive in high-pressure and competitive situations?</p>
+                <div class="options">
+                    <label><input type="radio" name="16" value="1"> Strongly Disagree</label>
+                    <label><input type="radio" name="16" value="2"> Disagree</label>
+                    <label><input type="radio" name="16" value="3"> Neutral</label>
+                    <label><input type="radio" name="16" value="4"> Agree</label>
+                    <label><input type="radio" name="16" value="5"> Strongly Agree</label>
+                </div>
+                 <p>Are you mechanically inclined and good at fixing things?</p>
+                <div class="options">
+                    <label><input type="radio" name="17" value="1"> Strongly Disagree</label>
+                    <label><input type="radio" name="17" value="2"> Disagree</label>
+                    <label><input type="radio" name="17" value="3"> Neutral</label>
+                    <label><input type="radio" name="17" value="4"> Agree</label>
+                    <label><input type="radio" name="17" value="5"> Strongly Agree</label>
+                </div>
+                 <p>Do you enjoy analyzing data and conducting research?</p>
+                <div class="options">
+                    <label><input type="radio" name="18" value="1"> Strongly Disagree</label>
+                    <label><input type="radio" name="18" value="2"> Disagree</label>
+                    <label><input type="radio" name="18" value="3"> Neutral</label>
+                    <label><input type="radio" name="18" value="4"> Agree</label>
+                    <label><input type="radio" name="18" value="5"> Strongly Agree</label>
+                </div>
+                 <p>Are you skilled in playing musical instruments or creating art?</p>
+                <div class="options">
+                    <label><input type="radio" name="19" value="1"> Strongly Disagree</label>
+                    <label><input type="radio" name="19" value="2"> Disagree</label>
+                    <label><input type="radio" name="19" value="3"> Neutral</label>
+                    <label><input type="radio" name="19" value="4"> Agree</label>
+                    <label><input type="radio" name="19" value="5"> Strongly Agree</label>
+                </div>
+                 <p>Do you excel in teamwork and collaboration?</p>
+                <div class="options">
+                    <label><input type="radio" name="20" value="1"> Strongly Disagree</label>
+                    <label><input type="radio" name="20" value="2"> Disagree</label>
+                    <label><input type="radio" name="20" value="3"> Neutral</label>
+                    <label><input type="radio" name="20" value="4"> Agree</label>
+                    <label><input type="radio" name="20" value="5"> Strongly Agree</label>
+                </div>
+            </div>
+            <p>
+            Click SUBMIT to calculate your inclination
+            </p>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const aptitudeForm = document.getElementById("aptitude-form");
+    
+          aptitudeForm.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting via HTTP request
+    
+            const formData = new FormData(aptitudeForm);
+    
+            // Convert form data to an object
+            const answers = {};
+            formData.forEach((value, key) => {
+              answers[key] = value;
+            });
+    
+            // Send the answers to the Flask server
+            fetch("http://127.0.0.1:5000/aptitude-test", {
+              method: "POST",
+              headers: {
+                "Authorization": "Bearer sk-d2e2a61e82404b62955c08ca93c93c16",
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ answers }),
+            })
+              .then((response) => response.json())
+              .then((data) => {
+  if (data.success) {
+    alert("Aptitude test submitted successfully!");
+    // Close the current tab
+    window.close();
+  } else {
+    alert("Error submitting aptitude test.");
+    // Handle the error case
+  }
+})
+   
+              .catch((error) => {
+                console.error("Error:", error);
+                alert("An error occurred while submitting the aptitude test.");
+              });
+          });
+        });
+    </script>
+      
+</body>
+</html>
