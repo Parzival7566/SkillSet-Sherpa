@@ -1,1 +1,5 @@
-This is the requirements.txt
+# usage: pip install -r requirements.txt
+
+Flask==2.1.1
+Flask-Cors==3.1.1
+requests==2.26.0
