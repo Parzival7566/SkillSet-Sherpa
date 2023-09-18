@@ -29,27 +29,32 @@ user_responses = {}
 def read_user_responses_from_file(file_path):
     try:
         with open(file_path, "r") as file:
-            lines = file.readlines()
-            return [int(line.strip()) for line in lines]
+            return json.load(file)
     except FileNotFoundError:
         print(f"File not found: {file_path}")
         return None
-    except ValueError:
-        print("Invalid response in the file.")
+    except json.JSONDecodeError:
+        print("Invalid JSON format in the file.")
         return None
 
 # Function to calculate and print RIASEC scores
-def calculate_riasec_scores(responses):
-    if len(responses) != len(questions):
+def calculate_riasec_scores(answers_dict):
+    if 'answers' not in answers_dict:
+        print("Invalid answers format.")
+        return
+
+    answers = answers_dict['answers']
+
+    if len(answers) != len(questions):
         print("Number of responses does not match the number of questions.")
         return
 
     print("\nRIASEC Scores:")
     total_score = 0
-    for (question, category), response in zip(questions, responses):
+    for (question, category), response in zip(questions, answers.values()):
         category = category.split()[0]  # Extract the category abbreviation (e.g., "Realistic (R)" => "Realistic")
-        user_responses[category] = response
-        total_score += response
+        user_responses[category] = int(response)
+        total_score += int(response)
         print(f"{category}: {response}")
 
     # Normalize the scores to a total of 100
@@ -63,10 +68,10 @@ def calculate_riasec_scores(responses):
 
 if __name__ == "__main__":
     user_responses = {}  # Reset user_responses
-    user_responses_list = read_user_responses_from_file("answers.txt")
+    answers_dict = read_user_responses_from_file("answers.txt")
     
-    if user_responses_list is not None:
-        results = calculate_riasec_scores(user_responses_list)
+    if answers_dict is not None:
+        results = calculate_riasec_scores(answers_dict)
         
         if results:
             with open("riasec_results.txt", "w") as file:
