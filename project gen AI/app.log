@@ -214,3 +214,11 @@ INFO:werkzeug:127.0.0.1 - - [18/Sep/2023 11:45:07] "OPTIONS /send-message HTTP/1
 INFO:werkzeug:127.0.0.1 - - [18/Sep/2023 11:45:17] "POST /send-message HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [18/Sep/2023 11:48:13] "OPTIONS /send-message HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [18/Sep/2023 11:48:53] "POST /send-message HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [18/Sep/2023 23:11:22] "OPTIONS /aptitude-test HTTP/1.1" 200 -
+INFO:app:Received data: {'answers': {'1': '1', '2': '3', '3': '4', '4': '3', '5': '1', '6': '1', '7': '3', '8': '4', '9': '5', '10': '3', '11': '1', '12': '3', '13': '2', '14': '3', '15': '2', '16': '4', '17': '4', '18': '5', '19': '1', '20': '3'}}
+INFO:werkzeug:127.0.0.1 - - [18/Sep/2023 23:11:22] "POST /aptitude-test HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [18/Sep/2023 23:28:06] "OPTIONS /aptitude-test HTTP/1.1" 200 -
+INFO:app:Received data: {'answers': {'1': '1', '2': '4', '3': '1', '4': '4', '5': '5', '6': '5', '7': '2', '8': '2', '9': '5', '10': '2', '11': '3', '12': '3', '13': '3', '14': '3', '15': '3', '16': '5', '17': '5', '18': '4', '19': '3', '20': '1'}}
+INFO:werkzeug:127.0.0.1 - - [18/Sep/2023 23:28:06] "POST /aptitude-test HTTP/1.1" 200 -
